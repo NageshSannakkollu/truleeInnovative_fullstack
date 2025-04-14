@@ -28,7 +28,7 @@ const AddCandidate = () => {
         const candidateDetails = {...data,skillSet}
         // console.log("candidateDetails:",candidateDetails)
         try {
-            const response = await axios.post('http://localhost:3029/api/register',candidateDetails)
+            const response = await axios.post('https://truleeinnovative-backend.onrender.com/api/register',candidateDetails)
             console.log(response)
             if(response.data.success){  
               toast.success(response.data.message)

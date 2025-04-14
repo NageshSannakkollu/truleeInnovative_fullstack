@@ -28,7 +28,7 @@ const LandingPage = () => {
 
     useEffect(() => {
         const getCandidateData = async() => {
-            const response = await axios.get('http://localhost:3029/api/all_candidates')
+            const response = await axios.get('https://truleeinnovative-backend.onrender.com/api/all_candidates')
             const responseData = await response;
             setCandidatesData(responseData.data)
         }
