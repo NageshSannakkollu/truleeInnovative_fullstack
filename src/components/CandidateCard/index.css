@@ -1,0 +1,41 @@
+.candidate_list_item {
+    display: flex;
+    align-items: center;
+}
+.profile_pic {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #777676;
+    border-radius: 50%;
+}
+.image_name_container {
+    display: flex;
+    align-items: center;
+}
+.candidate_list_item p{
+    font-size: 14px;
+}
+.each_skill {
+    margin: 2px;
+}
+.technology_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+}
+.hr_line {
+    width: 100%;
+    color: #b3aeae8e;
+}
+.three_dots {
+    color: #11a8a8;
+    margin-left: 25px;
+}
+@media screen and (max-width:767px){
+    .profile_pic {
+        display: none;
+    }
+    .email {
+        flex-wrap: wrap;
+    }
+}

@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Slide, ToastContainer } from "react-toastify"
+import LandingPage from './components/LandingPage'
+import AddCandidate from './components/AddCandidate'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "react-toastify/dist/ReactToastify.css"
+const App = () => (
+    <BrowserRouter>
+    <ToastContainer position='top-center' autoClose={600} hideProgressBar={true} transition={Slide}/>
+      <Routes>
+        <Route exact path="/" element={<LandingPage/>}/>
+        <Route exact path='/add_candidate' element={<AddCandidate/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
 
-export default App;
+
+export default App
